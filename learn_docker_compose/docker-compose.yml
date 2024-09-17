@@ -1,0 +1,23 @@
+services: # 定义服务
+  web:  # 服务名
+    image: nginx:latest  # 使用的镜像
+    ports:  # 端口映射
+      - "20080:80"
+    volumes:  # 挂载目录
+      - ./web:/usr/share/nginx/html # Nginx 用来存储和提供 HTML 文件的默认目录。
+    environment:  # 定义环境变量
+      - NGINX_HOST=localhost
+    # 定义依赖
+    # depends_on:
+    #   - serviceName
+    # 定义网络
+    # networks:
+    #   - networkName
+
+# 其他常见配置
+# 1. 自定义启动命令和入口点
+# 2. 自动重启策略
+# 3. 卷的共享机制
+# 4. 配置 DNS, 内核参数, 共享内存
+# 5. 配置容器的资源限制
+# 6. 权限控制
