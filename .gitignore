@@ -137,4 +137,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# MAC os
 .DS_Store
+
+# COCO dataset
+learn_cocoeval/annotations/*
